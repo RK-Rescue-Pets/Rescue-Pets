@@ -2,4 +2,49 @@ body{
   margin: 0;
   padding: 0;
   min-height: 100vh;
+  background-color: white;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  width: 100vw;
+  color:black;
+}
+
+#nav-sec-1{
+  color: black;
+}
+
+#nav-sec-2{
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(226, 226, 226);
+  border-radius: 50px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#nav-sec-2 *{
+  color:black;
+  padding: 6px 20px;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+#nav-sec-2 *:hover{
+  color:gray;
+  /* text-shadow: rgb(210, 155, 255) 1px 0 10px */
+}
+
+
+#nav-sec-3{
+  width: 30px;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+#nav-sec-3:hover{
+  transform: scale(1.1);
 }
