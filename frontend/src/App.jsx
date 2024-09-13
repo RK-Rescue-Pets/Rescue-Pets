@@ -6,6 +6,7 @@ import AdoptInfo from "./pages/AdoptInfo";
 import BreedInfo from "./pages/BreedInfo";
 import Saved from "./pages/Saved";
 import Navbar from "./components/Navbar";
+import MyProvider from "./context/MyProvider";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
