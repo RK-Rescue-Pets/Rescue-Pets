@@ -50,18 +50,176 @@ nav{
 }
 
 #breedForm {
-  width: 80%;
   margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
 }
 
-#breedForm input {
-  color: black;
-}
-
-#breedForm input::placeholder{
-  color: #d3d3d3
+#breedForm p {
+  width: 100%;
 }
 
 #breedSearchSvg{
   height:55%;
+}
+.hoverTab span, .hoverTab path{
+  transition: all .3s ease;
+}
+
+.hoverTab:hover path{
+  fill: #ebebed;
+}
+.hoverTab:hover span{
+  color: #ebebed;
+}
+
+
+.breedCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+  min-height: 400px;
+  background-color: white;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 10px 20px 20px 20px;
+  /* transition: all 0.05s ease-in; */
+  transition: transform 0.2s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.breedCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px; /* Adjust the height as needed */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  border-radius: 8px 8px 0 0; /* Match the border radius of the card */
+  z-index: 1;
+}
+
+.breedCard:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+}
+
+.cardImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-bottom: 10px;
+  z-index: 2; /* Ensure the image is above the gradient */
+}
+
+.breedName {
+  color: black;
+  font-weight: 900;
+  margin: 0 0 10px;
+  font-size: 35px;
+  text-align: center;
+  text-shadow: 1px 1px 2px white, 0 0 1em white, 0 0 0.2em white;
+  z-index: 2; /* Ensure the text is above the gradient */
+  position: relative; /* To make sure z-index applies */
+}
+
+.breedDesc {
+  margin-top: 10px;
+  color: black;
+  text-align: center;
+}
+
+#card-holder {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  justify-content: center;
+}
+
+.button-6 {
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.button-6:hover,
+.button-6:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.button-6:hover {
+  transform: translateY(-1px);
+}
+
+.button-6:active {
+  background-color: #f0f0f1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
+}
+
+.ratingWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.ratingDiv {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px 0 15px 0;
+}
+
+.ratingDiv img {
+  width: 35px;
+  padding: 0 5px;
+}
+
+#catDropdown{
+  background-color: white;
+  color: black;
+}
+
+#catDropdown .icon{
+  width: 22.5px;
+  padding: 0 5px;
+}
+
+.attributeDrop{
+  max-height: 300px;
+  overflow-y: auto;
 }
